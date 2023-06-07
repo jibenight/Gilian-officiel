@@ -17,6 +17,16 @@ body {
   margin: 0;
 }
 
+h1,
+h2,
+h3,
+h4,
+p,
+a,
+li {
+  color: white;
+}
+
 @media (prefers-color-scheme: light) {
   :root {
     color: #213547;

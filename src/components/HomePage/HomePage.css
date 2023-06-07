@@ -1,0 +1,56 @@
+.homepage {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.homepage h1 {
+  font-size: 7vw; /* Adapte la taille de la police à 3% de la largeur de la fenêtre du navigateur */
+}
+
+@media screen and (max-width: 600px) {
+  .homepage h1 {
+    font-size: 5vw; /* Si la largeur de la fenêtre est inférieure à 600px, adapte la taille de la police à 5% de la largeur de la fenêtre du navigateur */
+  }
+}
+.background,
+.portrait {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.background {
+  z-index: 1;
+}
+
+.portrait {
+  z-index: 2;
+}
+
+.content {
+  position: relative;
+  z-index: 3;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-end;
+  height: 100%;
+  padding-bottom: 5%;
+}
+
+.buttons {
+  display: flex;
+  gap: 20px;
+}
+
+button {
+  background-color: white;
+  border-radius: 100px;
+  padding: 10px;
+  width: 100px;
+}

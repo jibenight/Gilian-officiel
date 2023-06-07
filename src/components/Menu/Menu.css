@@ -1,20 +1,32 @@
 header {
-  background: #f8f9fa; /* couleur de fond pour le header, à modifier selon vos préférences */
+  z-index: 4;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
 }
-
 nav ul {
   list-style-type: none; /* supprime les puces de la liste */
   padding: 0; /* supprime le padding par défaut sur la liste */
   margin: 0; /* supprime la marge par défaut sur la liste */
   display: flex; /* met les éléments de la liste en ligne */
   justify-content: center; /* centre les éléments de la liste horizontalement */
+  margin: auto;
 }
 
 nav ul li {
-  margin: 0 10px; /* ajoute une marge à gauche et à droite de chaque élément de la liste */
+  margin: 15px 20px; /* ajoute une marge à gauche et à droite de chaque élément de la liste */
 }
 
 nav ul li a {
   text-decoration: none; /* supprime le soulignement des liens */
   color: black; /* couleur des liens, à modifier selon vos préférences */
+}
+
+nav ul li a figcaption {
+  text-align: center;
+  display: none;
+}
+
+nav ul li a picture:hover figcaption {
+  display: block;
 }
