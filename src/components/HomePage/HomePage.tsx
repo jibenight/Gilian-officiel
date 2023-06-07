@@ -37,7 +37,6 @@ const HomePage: React.FC = () => {
           transition: spring,
         }}
       >
-        <img src='/Gilian-background.webp' alt='' />
         <picture>
           <source
             media='(max-width: 799px)'
