@@ -1,8 +1,5 @@
 header {
-  z-index: 4;
-  position: absolute;
-  left: 50%;
-  transform: translateX(-50%);
+  width: 100vw;
 }
 nav ul {
   list-style-type: none; /* supprime les puces de la liste */
