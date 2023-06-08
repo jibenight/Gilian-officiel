@@ -1,4 +1,6 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
+import { motion as m, AnimatePresence } from 'framer-motion';
+
 import './HomePage.css';
 import Tracks from '../Tracks/Tracks';
 import Bio from '../Bio/Bio';
@@ -18,17 +20,30 @@ function HomePage() {
       {currentComponent === '' && (
         <Menu setCurrentComponent={setCurrentComponent} />
       )}
-      {currentComponent === '' && <h1>Gilian</h1>}
-      {currentComponent === 'Tracks' && (
-        <Tracks closeComponent={closeComponent} />
+
+      {currentComponent === '' && (
+        <m.h1
+          key='titre1'
+          initial={{ y: '100', opacity: 0 }}
+          animate={{ y: 0, opacity: 1 }}
+          exit={{ y: '-100vh', opacity: 0 }}
+          transition={{ duration: 0.5 }}
+        >
+          Gilian
+        </m.h1>
       )}
-      {currentComponent === 'Gallery' && (
-        <Gallery closeComponent={closeComponent} />
-      )}
-      {currentComponent === 'Bio' && <Bio closeComponent={closeComponent} />}
-      {currentComponent === 'Contact' && (
-        <Contact closeComponent={closeComponent} />
-      )}
+      <AnimatePresence mode='wait'>
+        {currentComponent === 'Tracks' && (
+          <Tracks closeComponent={closeComponent} />
+        )}
+        {currentComponent === 'Gallery' && (
+          <Gallery closeComponent={closeComponent} />
+        )}
+        {currentComponent === 'Bio' && <Bio closeComponent={closeComponent} />}
+        {currentComponent === 'Contact' && (
+          <Contact closeComponent={closeComponent} />
+        )}
+      </AnimatePresence>
     </div>
   );
 }

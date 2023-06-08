@@ -10,12 +10,11 @@
   align-items: center;
 }
 #homepage h1 {
-  font-size: 7vw; /* Adapte la taille de la police à 3% de la largeur de la fenêtre du navigateur */
-  margin: 0;
+  font-size: 6em;
+  line-height: calc(1.3rem + 1.5vw);
+  font-weight: 800;
+  margin-top: 100px;
 }
 
 @media screen and (max-width: 600px) {
-  #homepage h1 {
-    font-size: 7vw; /* Si la largeur de la fenêtre est inférieure à 600px, adapte la taille de la police à 5% de la largeur de la fenêtre du navigateur */
-  }
 }

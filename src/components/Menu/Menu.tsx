@@ -1,8 +1,15 @@
 import './Menu.css';
+import { motion as m, AnimatePresence } from 'framer-motion';
 
 function Menu({ setCurrentComponent }) {
   return (
-    <header>
+    <m.header
+      key='Menu'
+      initial={{ y: '-100', opacity: 0 }}
+      animate={{ y: 0, opacity: 1 }}
+      exit={{ y: '100', opacity: 0 }}
+      transition={{ duration: 0.5 }}
+    >
       <nav>
         <ul>
           <li onClick={() => setCurrentComponent('Tracks')}>
@@ -39,7 +46,7 @@ function Menu({ setCurrentComponent }) {
           </li>
         </ul>
       </nav>
-    </header>
+    </m.header>
   );
 }
 
