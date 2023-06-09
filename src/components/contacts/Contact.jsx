@@ -1,6 +1,6 @@
 import './Contact.css';
 import { motion as m } from 'framer-motion';
-import ButtonClose from '../buttonClose/ButtonClose';
+import ButtonClose from '../close/ButtonClose';
 
 function Contact({ closeComponent }) {
   return (

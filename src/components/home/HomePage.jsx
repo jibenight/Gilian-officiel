@@ -2,9 +2,9 @@ import { useState } from 'react';
 import { motion as m, AnimatePresence } from 'framer-motion';
 
 import './HomePage.css';
-import Tracks from '../tracks/Tracks';
-import Bio from '../bio/Bio';
-import Gallery from '../gallery/Gallery';
+import Tracks from '../music-ep/Tracks';
+import Bio from '../about/Bio';
+import Gallery from '../shooting/Gallery';
 import Contact from '../contacts/Contact';
 import Menu from '../navigation/Menu';
 

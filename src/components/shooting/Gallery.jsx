@@ -1,6 +1,6 @@
 import './Gallery.css';
 import { motion as m } from 'framer-motion';
-import ButtonClose from '../buttonClose/ButtonClose';
+import ButtonClose from '../close/ButtonClose';
 
 function Gallery({ closeComponent }) {
   return (
