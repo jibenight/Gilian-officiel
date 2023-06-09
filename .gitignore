@@ -22,3 +22,10 @@ dist-ssr
 *.njsproj
 *.sln
 *.sw?
+
+#serveur 
+.htaccess
+tmp
+
+#parcel
+.parcel-cache 

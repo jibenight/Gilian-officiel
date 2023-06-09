@@ -1,9 +1,10 @@
 import './ButtonClose.css';
+import closeIcon from '../../assets/images/close.svg';
 
 function ButtonClose({ closeComponent }) {
   return (
     <div className='close-icon' onClick={() => closeComponent('')}>
-      <img src='/close.svg' alt='icon en croix pour la fermeture' />
+      <img src={closeIcon} alt='icon en croix pour la fermeture' />
     </div>
   );
 }

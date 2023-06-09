@@ -1,4 +1,8 @@
 import './Menu.css';
+import music from '../../assets/images/music.svg';
+import gallery from '../../assets/images/shooting.svg';
+import bio from '../../assets/images/profil.svg';
+import contact from '../../assets/images/mail.svg';
 import { motion as m } from 'framer-motion';
 
 function Menu({ setCurrentComponent }) {
@@ -13,33 +17,33 @@ function Menu({ setCurrentComponent }) {
         <ul>
           <li onClick={() => setCurrentComponent('Tracks')}>
             <picture>
-              <source media='(max-width: 799px)' srcSet='/music.svg' />
-              <source media='(min-width: 800px)' srcSet='/music.svg' />
-              <img src='/music.svg' alt="Description de l'image" />
+              <source media='(max-width: 799px)' srcSet={music} />
+              <source media='(min-width: 800px)' srcSet={music} />
+              <img src={music} alt="Description de l'image" />
               <figcaption>Tracks</figcaption>
             </picture>
           </li>
           <li onClick={() => setCurrentComponent('Gallery')}>
             <picture>
-              <source media='(max-width: 799px)' srcSet='/shooting.svg' />
-              <source media='(min-width: 800px)' srcSet='/shooting.svg' />
-              <img src='/shooting.svg' alt="Description de l'image" />
+              <source media='(max-width: 799px)' srcSet={gallery} />
+              <source media='(min-width: 800px)' srcSet={gallery} />
+              <img src={gallery} alt="Description de l'image" />
               <figcaption>Gallery</figcaption>
             </picture>
           </li>
           <li onClick={() => setCurrentComponent('Bio')}>
             <picture>
-              <source media='(max-width: 799px)' srcSet='/profil.svg' />
-              <source media='(min-width: 800px)' srcSet='/profil.svg' />
-              <img src='/profil.svg' alt="Description de l'image" />
+              <source media='(max-width: 799px)' srcSet={bio} />
+              <source media='(min-width: 800px)' srcSet={bio} />
+              <img src={bio} alt="Description de l'image" />
               <figcaption>Bio</figcaption>
             </picture>
           </li>
           <li onClick={() => setCurrentComponent('Contact')}>
             <picture>
-              <source media='(max-width: 799px)' srcSet='/mail.svg' />
-              <source media='(min-width: 800px)' srcSet='/mail.svg' />
-              <img src='/mail.svg' alt="Description de l'image" />
+              <source media='(max-width: 799px)' srcSet={contact} />
+              <source media='(min-width: 800px)' srcSet={contact} />
+              <img src={contact} alt="Description de l'image" />
               <figcaption>Contact</figcaption>
             </picture>
           </li>
