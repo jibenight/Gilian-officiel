@@ -5,7 +5,7 @@ import './HomePage.css';
 import Tracks from '../tracks/Tracks';
 import Bio from '../bio/Bio';
 import Gallery from '../gallery/Gallery';
-import Contact from '../contact/Contact';
+import Contact from '../contacts/Contact';
 import Menu from '../navigation/Menu';
 
 function HomePage() {
