@@ -2,7 +2,11 @@ import './Gallery.css';
 import { motion as m } from 'framer-motion';
 import ButtonClose from '../ButtonClose/ButtonClose';
 
-function Gallery({ closeComponent }) {
+interface Props {
+  closeComponent: (componentName: string) => void;
+}
+
+const Gallery: React.FC<Props> = ({ closeComponent }) => {
   return (
     <m.div
       className='background-item'
@@ -18,6 +22,6 @@ function Gallery({ closeComponent }) {
       </div>
     </m.div>
   );
-}
+};
 
 export default Gallery;

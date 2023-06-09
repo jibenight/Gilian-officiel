@@ -1,7 +1,11 @@
 import './Menu.css';
-import { motion as m, AnimatePresence } from 'framer-motion';
+import { motion as m } from 'framer-motion';
 
-function Menu({ setCurrentComponent }) {
+interface MenuProps {
+  setCurrentComponent: (componentName: string) => void;
+}
+
+const Menu: React.FC<MenuProps> = ({ setCurrentComponent }) => {
   return (
     <m.header
       key='Menu'
@@ -47,6 +51,6 @@ function Menu({ setCurrentComponent }) {
       </nav>
     </m.header>
   );
-}
+};
 
 export default Menu;

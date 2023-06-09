@@ -2,7 +2,11 @@ import './Bio.css';
 import { motion as m } from 'framer-motion';
 import ButtonClose from '../ButtonClose/ButtonClose';
 
-function Bio({ closeComponent }) {
+interface Props {
+  closeComponent: (componentName: string) => void;
+}
+
+const Bio: React.FC<Props> = ({ closeComponent }) => {
   return (
     <m.div
       className='background-item'
@@ -18,6 +22,6 @@ function Bio({ closeComponent }) {
       </div>
     </m.div>
   );
-}
+};
 
 export default Bio;

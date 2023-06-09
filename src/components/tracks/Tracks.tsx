@@ -2,7 +2,11 @@ import { motion as m } from 'framer-motion';
 import './Tracks.css';
 import ButtonClose from '../ButtonClose/ButtonClose';
 
-function Tracks({ closeComponent }) {
+interface Props {
+  closeComponent: (componentName: string) => void;
+}
+
+const Tracks: React.FC<Props> = ({ closeComponent }) => {
   return (
     <m.div
       className='background-item'
@@ -18,6 +22,6 @@ function Tracks({ closeComponent }) {
       </div>
     </m.div>
   );
-}
+};
 
 export default Tracks;

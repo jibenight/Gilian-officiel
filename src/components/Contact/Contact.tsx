@@ -2,7 +2,11 @@ import './Contact.css';
 import { motion as m } from 'framer-motion';
 import ButtonClose from '../ButtonClose/ButtonClose';
 
-function Contact({ closeComponent }) {
+interface Props {
+  closeComponent: (componentName: string) => void;
+}
+
+const Contact: React.FC<Props> = ({ closeComponent }) => {
   return (
     <m.div
       className='background-item'
@@ -18,6 +22,6 @@ function Contact({ closeComponent }) {
       </div>
     </m.div>
   );
-}
+};
 
 export default Contact;
