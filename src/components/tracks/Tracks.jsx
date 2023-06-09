@@ -1,6 +1,6 @@
 import { motion as m } from 'framer-motion';
 import './Tracks.css';
-import ButtonClose from '../ButtonClose/ButtonClose';
+import ButtonClose from '../buttonClose/ButtonClose';
 
 function Tracks({ closeComponent }) {
   return (

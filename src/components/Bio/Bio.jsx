@@ -1,6 +1,6 @@
 import './Bio.css';
 import { motion as m } from 'framer-motion';
-import ButtonClose from '../ButtonClose/ButtonClose';
+import ButtonClose from '../buttonClose/ButtonClose';
 
 function Bio({ closeComponent }) {
   return (

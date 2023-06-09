@@ -2,11 +2,11 @@ import { useState } from 'react';
 import { motion as m, AnimatePresence } from 'framer-motion';
 
 import './HomePage.css';
-import Tracks from '../Tracks/Tracks';
-import Bio from '../Bio/Bio';
-import Gallery from '../Gallery/Gallery';
-import Contact from '../Contact/Contact';
-import Menu from '../Menu/Menu';
+import Tracks from '../tracks/Tracks';
+import Bio from '../bio/Bio';
+import Gallery from '../gallery/Gallery';
+import Contact from '../contact/Contact';
+import Menu from '../menu/Menu';
 
 function HomePage() {
   const [currentComponent, setCurrentComponent] = useState('');
