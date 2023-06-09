@@ -37,6 +37,8 @@ button {
   border-radius: 15px;
   margin: 10px;
   padding: 10px;
+  overflow-x: hidden; /* défilement horizontal */
+  overflow-y: auto; /* pas de défilement vertical */
 }
 
 @media screen and (min-width: 360px) {
