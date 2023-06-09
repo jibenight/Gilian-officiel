@@ -6,7 +6,7 @@ import Tracks from '../tracks/Tracks';
 import Bio from '../bio/Bio';
 import Gallery from '../gallery/Gallery';
 import Contact from '../contact/Contact';
-import Menu from '../menu/Menu';
+import Menu from '../navigation/Menu';
 
 function HomePage() {
   const [currentComponent, setCurrentComponent] = useState('');
