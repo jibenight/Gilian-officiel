@@ -20,13 +20,11 @@ function HomePage() {
       {currentComponent === '' && (
         <Menu setCurrentComponent={setCurrentComponent} />
       )}
-
       {currentComponent === '' && (
         <m.h1
           key='titre1'
           initial={{ y: '100', opacity: 0 }}
           animate={{ y: 0, opacity: 1 }}
-          exit={{ y: '-100vh', opacity: 0 }}
           transition={{ duration: 0.5 }}
         >
           Gilian
