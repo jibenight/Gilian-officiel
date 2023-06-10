@@ -7,14 +7,6 @@ const path = require('path');
 const app = express();
 const port = 3000;
 
-// Middleware to set Content-Type for JS and MJS files
-app.use((req, res, next) => {
-  if (req.path.endsWith('.js') || req.path.endsWith('.mjs')) {
-    res.type('application/javascript');
-  }
-  next();
-});
-
 app.use(express.static(path.join(__dirname, 'dist')));
 
 app.get('/', (req, res) => {
