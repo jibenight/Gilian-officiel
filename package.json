@@ -2,7 +2,7 @@
   "name": "react-gilian",
   "version": "1.0.0",
   "type": "commonjs",
-  "source": "index.html",
+  "source": "./src/index.html",
   "scripts": {
     "start": "parcel",
     "build": "parcel build"
