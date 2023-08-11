@@ -4,7 +4,9 @@
   "type": "commonjs",
   "source": "./src/index.html",
   "scripts": {
-    "start": "parcel",
+    "start": "concurrently \"npm run server\" \"npm run client\"",
+    "server": "nodemon server.js",
+    "client": "parcel",
     "build": "parcel build"
   },
   "dependencies": {
@@ -18,6 +20,8 @@
   },
   "devDependencies": {
     "parcel": "^2.9.2",
-    "process": "^0.11.10"
+    "process": "^0.11.10",
+    "concurrently": "^7.0.0",
+    "nodemon": "^2.0.15"
   }
 }
