@@ -1,7 +1,7 @@
 #homepage {
   width: 100vw;
   height: 100vh;
-  background-image: url('../../assets/images/phoenix.webp');
+  background-color: #b8d7ec;
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
@@ -14,10 +14,17 @@
   line-height: calc(1.3rem + 1.5vw);
   font-weight: 800;
   margin-top: 120px;
+  display: none;
 }
 
 @media screen and (max-width: 600px) {
   #homepage h1 {
     font-size: 6em;
+  }
+}
+
+@media screen and (min-width: 1050px) {
+  #homepage {
+    background-image: url('../../assets/images/photos/desktop/homepage-covers.webp');
   }
 }

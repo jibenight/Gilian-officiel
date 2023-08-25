@@ -4,24 +4,27 @@
   "type": "commonjs",
   "source": "./src/index.html",
   "scripts": {
-    "start": "concurrently \"npm run server\" \"npm run client\"",
+    "start": "concurrently -k v\"npm run server\" \"npm run client\"",
     "server": "nodemon server.js",
     "client": "parcel",
     "build": "parcel build"
   },
   "dependencies": {
+    "@parcel/transformer-raw": "^2.9.3",
     "@types/react-router-dom": "^5.3.3",
     "express": "^4.18.2",
     "framer-motion": "^10.12.16",
+    "lightningcss": "^1.21.7",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-router-dom": "^6.12.0",
-    "react-spring": "^9.7.1"
+    "react-spring": "^9.7.1",
+    "swiper": "^10.2.0"
   },
   "devDependencies": {
-    "parcel": "^2.9.2",
-    "process": "^0.11.10",
     "concurrently": "^7.0.0",
-    "nodemon": "^2.0.15"
+    "nodemon": "^2.0.15",
+    "parcel": "^2.9.3",
+    "process": "^0.11.10"
   }
 }
