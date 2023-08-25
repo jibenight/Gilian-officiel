@@ -7,6 +7,7 @@ import Bio from '../about/Bio';
 import Gallery from '../shooting/Gallery';
 import Contact from '../contacts/Contact';
 import Menu from '../navigation/Menu';
+import textImage from '../../assets/images/photos/homepage/text-mask.webp';
 
 function HomePage() {
   const [currentComponent, setCurrentComponent] = useState('');
@@ -21,14 +22,16 @@ function HomePage() {
         <Menu setCurrentComponent={setCurrentComponent} />
       )}
       {currentComponent === '' && (
-        <m.h1
-          key='titre1'
-          initial={{ y: '100', opacity: 0 }}
-          animate={{ y: 0, opacity: 1 }}
-          transition={{ duration: 0.5 }}
-        >
-          Gilian
-        </m.h1>
+        <div id='centered-div'>
+          <m.div
+            key='titre1'
+            initial={{ y: '100', opacity: 0 }}
+            animate={{ y: 0, opacity: 1 }}
+            transition={{ duration: 0.5 }}
+          >
+            <img id='texte-logo' src={textImage} alt='' />
+          </m.div>
+        </div>
       )}
       <AnimatePresence mode='wait'>
         {currentComponent === 'Tracks' && (

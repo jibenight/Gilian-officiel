@@ -1,34 +1,34 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { motion as m } from 'framer-motion';
 import './Tracks.css';
-// import tracksData from './tracksDat';
+import tracksData from './tracksData';
 import ButtonClose from '../close/ButtonClose';
+import playButton from '../../assets/images/icons/play.svg';
+import pauseButton from '../../assets/images/icons/pause.svg';
+import youtubeIcon from '../../assets/images/icons/youtube.svg';
 
-function tracksData({ closeComponent }) {
+function Tracks({ closeComponent }) {
   const [currentTrack, setCurrentTrack] = useState(tracksData[0]);
   const [isPlaying, setIsPlaying] = useState(false);
   const audioRef = useRef(null);
 
-  const handlePlayPause = () => {
-    if (isPlaying) {
-      audioRef.current.pause();
-    } else {
-      audioRef.current.play();
-    }
-    setIsPlaying(!isPlaying);
-  };
-
-  const handleTrackChange = track => {
-    setCurrentTrack(track);
-    if (isPlaying) {
+  const handlePlayPause = track => {
+    if (isPlaying && currentTrack === track) {
       audioRef.current.pause();
       setIsPlaying(false);
+    } else {
+      setCurrentTrack(track);
+      setIsPlaying(true);
     }
   };
 
   useEffect(() => {
-    audioRef.current.load();
-  }, [currentTrack]);
+    if (isPlaying) {
+      audioRef.current.play();
+    } else {
+      audioRef.current.pause();
+    }
+  }, [isPlaying, currentTrack]);
 
   return (
     <m.div
@@ -40,12 +40,12 @@ function tracksData({ closeComponent }) {
       transition={{ duration: 0.5 }}
     >
       <div className='sub-title'>
-        <h2>tracksData</h2>
+        <h2>Musique</h2>
         <ButtonClose closeComponent={closeComponent} />
       </div>
       <div id='tracksData'>
         <div className='player'>
-          <picture>
+          <picture className='cover'>
             <source
               media='(max-width: 767px)'
               srcSet={currentTrack.coverMobile}
@@ -56,24 +56,58 @@ function tracksData({ closeComponent }) {
             />
             <img
               src={currentTrack.coverDesktop} // fallback
-              alt={currentTrack.title}
+              alt={currentTrack.title || 'Default Track'}
             />
           </picture>
           <audio ref={audioRef} src={currentTrack.source}></audio>
-          <button onClick={handlePlayPause}>
-            {isPlaying ? 'Pause' : 'Play'}
-          </button>
         </div>
         <div className='tracklist'>
-          {tracksData.map((track, index) => (
-            <div key={index} onClick={() => handleTrackChange(track)}>
-              {track.title}
-            </div>
-          ))}
+          {tracksData.map((track, index) => {
+            // Si le track n'a ni titre ni source, ne rien afficher
+            if (!track.title && !track.source) return null;
+
+            return (
+              <React.Fragment key={index}>
+                <div className='music-item'>
+                  <div>
+                    <h3>{track.title || 'Default Track'}</h3>
+                  </div>
+                  <div className='icon-play'>
+                    {track.source ? (
+                      <div>
+                        <button onClick={() => handlePlayPause(track)}>
+                          {isPlaying && currentTrack === track ? (
+                            <img src={pauseButton} alt='bouton de lecture' />
+                          ) : (
+                            <img src={playButton} alt='bouton de lecture' />
+                          )}
+                        </button>
+                      </div>
+                    ) : (
+                      <div>À VENIR</div>
+                    )}
+                    {track.youtubeLink && (
+                      <div>
+                        <a
+                          href={track.youtubeLink}
+                          target='_blank'
+                          rel='noreferrer'
+                        >
+                          <img src={youtubeIcon} alt='YouTube' />
+                        </a>
+                      </div>
+                    )}
+                  </div>
+                </div>
+                {index !== tracksData.length - 1 && <hr />}
+                {/* Ne pas ajouter <hr> après le dernier élément */}
+              </React.Fragment>
+            );
+          })}
         </div>
       </div>
     </m.div>
   );
 }
 
-export default tracksData;
+export default Tracks;

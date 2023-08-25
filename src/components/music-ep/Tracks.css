@@ -1,1 +1,44 @@
+#tracksData .cover img {
+  width: 300px;
+  margin: auto;
+}
 
+#tracksData .player {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.music-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 20px;
+}
+
+.icon-play {
+  display: flex;
+}
+
+.icon-play > * {
+  margin: 0 5px;
+}
+
+button::-moz-focus-inner {
+  border: 0;
+}
+
+button:active,
+button:focus {
+  -webkit-tap-highlight-color: transparent;
+}
+
+button:focus {
+  outline: none;
+  box-shadow: none;
+}
+
+hr {
+  color: #4e5b6f;
+}

@@ -1,8 +1,8 @@
 import './Menu.css';
-import music from '../../assets/images/music.svg';
-import gallery from '../../assets/images/shooting.svg';
-import bio from '../../assets/images/profil.svg';
-import contact from '../../assets/images/mail.svg';
+import music from '../../assets/images/icons/song.svg';
+import gallery from '../../assets/images/icons/gallery.svg';
+import bio from '../../assets/images/icons/user.svg';
+import contact from '../../assets/images/icons/mail.svg';
 import { motion as m } from 'framer-motion';
 
 function Menu({ setCurrentComponent }) {

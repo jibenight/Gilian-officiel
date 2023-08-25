@@ -1,5 +1,5 @@
 import './ButtonClose.css';
-import closeIcon from '../../assets/images/close.svg';
+import closeIcon from '../../assets/images/icons/close.svg';
 
 function ButtonClose({ closeComponent }) {
   return (

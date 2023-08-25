@@ -4,6 +4,7 @@
 }
 body {
   margin: 0;
+  overflow-y: hidden;
 }
 
 h1,
@@ -12,8 +13,9 @@ h3,
 h4,
 p,
 a,
-li {
-  color: black;
+li,
+figcaption {
+  color: #4e5b6f;
 }
 
 a {
@@ -72,6 +74,7 @@ button {
 
 .sub-title h2 {
   font-size: 1.9em;
+  color: #4e5b6f;
 }
 
 @media (prefers-color-scheme: light) {
