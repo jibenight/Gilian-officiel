@@ -22,16 +22,14 @@ function HomePage() {
         <Menu setCurrentComponent={setCurrentComponent} />
       )}
       {currentComponent === '' && (
-        <div id='centered-div'>
-          <m.div
-            key='titre1'
-            initial={{ y: '100', opacity: 0 }}
-            animate={{ y: 0, opacity: 1 }}
-            transition={{ duration: 0.5 }}
-          >
-            <img id='texte-logo' src={textImage} alt='' />
-          </m.div>
-        </div>
+        <m.div
+          key='titre1'
+          initial={{ y: '200', opacity: 0 }}
+          animate={{ y: 0, opacity: 1 }}
+          transition={{ duration: 0.5 }}
+        >
+          <img id='texte-logo' src={textImage} alt='' />
+        </m.div>
       )}
       <AnimatePresence mode='wait'>
         {currentComponent === 'Tracks' && (
