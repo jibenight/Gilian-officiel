@@ -7,28 +7,37 @@ import Bio from '../about/Bio';
 import Gallery from '../shooting/Gallery';
 import Contact from '../contacts/Contact';
 import Menu from '../navigation/Menu';
+import Mention from '../Mention/Mention';
 import textImage from '../../assets/images/photos/homepage/text-mask.webp';
 
 function HomePage() {
   const [currentComponent, setCurrentComponent] = useState('');
+  const [showMention, setShowMention] = useState(false);
 
   function closeComponent() {
     setCurrentComponent('');
   }
 
+  function handleMentionClick() {
+    setCurrentComponent(''); // Ferme le composant actuel et le menu
+    setShowMention(true); // Affiche Mention
+  }
+
   return (
     <div id='homepage'>
-      {currentComponent === '' && (
+      {currentComponent === '' && !showMention && (
         <Menu setCurrentComponent={setCurrentComponent} />
       )}
+
       {currentComponent === '' && (
         <m.div
+          id='texte-logo'
           key='titre1'
-          initial={{ y: '200', opacity: 0 }}
-          animate={{ y: 0, opacity: 1 }}
-          transition={{ duration: 0.5 }}
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ duration: 1 }}
         >
-          <img id='texte-logo' src={textImage} alt='' />
+          <img src={textImage} alt='' />
         </m.div>
       )}
       <AnimatePresence mode='wait'>
@@ -40,7 +49,18 @@ function HomePage() {
         )}
         {currentComponent === 'Bio' && <Bio closeComponent={closeComponent} />}
         {currentComponent === 'Contact' && (
-          <Contact closeComponent={closeComponent} />
+          <Contact
+            closeComponent={closeComponent}
+            openMention={handleMentionClick}
+          />
+        )}
+        {showMention && (
+          <Mention
+            closeComponent={() => {
+              setShowMention(false);
+              setCurrentComponent('');
+            }}
+          />
         )}
       </AnimatePresence>
     </div>

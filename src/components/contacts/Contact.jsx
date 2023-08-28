@@ -6,7 +6,7 @@ import tiktok from '../../assets/images/tiktok.svg';
 import instagram from '../../assets/images/instagram.svg';
 import facebook from '../../assets/images/facebook.svg';
 
-function Contact({ closeComponent }) {
+function Contact({ closeComponent, openMention }) {
   return (
     <m.div
       className='background-item'
@@ -52,7 +52,15 @@ function Contact({ closeComponent }) {
 
         <div id='mention'>
           <p>
-            <a href=''>Mentions légales</a>
+            <a
+              href='#'
+              onClick={e => {
+                e.preventDefault();
+                openMention();
+              }}
+            >
+              Mentions légales
+            </a>
           </p>
           <p>
             Copyright © 2023 ♪{' '}
