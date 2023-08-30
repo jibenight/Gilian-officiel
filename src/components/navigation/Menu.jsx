@@ -19,7 +19,12 @@ function Menu({ setCurrentComponent }) {
             <picture>
               <source media='(max-width: 799px)' srcSet={music} />
               <source media='(min-width: 800px)' srcSet={music} />
-              <img src={music} alt="Description de l'image" />
+              <img
+                src={music}
+                alt="Description de l'image"
+                width='60px'
+                height='60px'
+              />
               <figcaption>Tracks</figcaption>
             </picture>
           </li>
@@ -27,7 +32,12 @@ function Menu({ setCurrentComponent }) {
             <picture>
               <source media='(max-width: 799px)' srcSet={gallery} />
               <source media='(min-width: 800px)' srcSet={gallery} />
-              <img src={gallery} alt="Description de l'image" />
+              <img
+                src={gallery}
+                alt="Description de l'image"
+                width='60px'
+                height='60px'
+              />
               <figcaption>Gallery</figcaption>
             </picture>
           </li>
@@ -35,7 +45,12 @@ function Menu({ setCurrentComponent }) {
             <picture>
               <source media='(max-width: 799px)' srcSet={bio} />
               <source media='(min-width: 800px)' srcSet={bio} />
-              <img src={bio} alt="Description de l'image" />
+              <img
+                src={bio}
+                alt="Description de l'image"
+                width='60px'
+                height='60px'
+              />
               <figcaption>Bio</figcaption>
             </picture>
           </li>
@@ -43,7 +58,12 @@ function Menu({ setCurrentComponent }) {
             <picture>
               <source media='(max-width: 799px)' srcSet={contact} />
               <source media='(min-width: 800px)' srcSet={contact} />
-              <img src={contact} alt="Description de l'image" />
+              <img
+                src={contact}
+                alt="Description de l'image"
+                width='60px'
+                height='60px'
+              />
               <figcaption>Contact</figcaption>
             </picture>
           </li>

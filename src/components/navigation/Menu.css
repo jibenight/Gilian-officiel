@@ -29,3 +29,9 @@ nav ul li figcaption {
 nav ul li picture:hover figcaption {
   display: block;
 }
+
+@media (hover: none) {
+  figcaption {
+    display: none;
+  }
+}

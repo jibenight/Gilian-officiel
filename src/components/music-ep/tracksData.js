@@ -7,6 +7,7 @@ import nouvelleOrleansMobile from '../../assets/images/photos/mobile/nouvelle-or
 // sur le fil
 import surLeFilDesktop from '../../assets/images/photos/desktop/sur-le-fil-cover.webp';
 import surLeFilMobile from '../../assets/images/photos/mobile/sur-le-fil-cover.webp';
+import surLeFilAudio from '../../assets/tracks/sur-le-fil.mp3';
 
 //echo du phoenix
 import echoDuPhoenixDesktop from '../../assets/images/photos/desktop/echo-du-phoenix-cover.webp';
@@ -22,14 +23,14 @@ const tracksData = [
   },
   {
     title: 'Echo du phoenix',
-    source: `${config.BASE_URL}/public/tracks/echo-du-phoenix.mp3`,
+    source: `https://gilian-officiel.com/tracks/echo-du-phoenix.mp3`,
     coverMobile: echoDuPhoenixMobile,
     coverDesktop: echoDuPhoenixDesktop,
     youtubeLink: 'https://www.youtube.com/watch?v=mhlj0ZNLjcI',
   },
   {
     title: 'Sur le fil',
-    source: `${config.BASE_URL}/public/tracks/sur-le-fil.mp3`,
+    source: 'https://gilian-officiel.com/tracks/sur-le-fil.mp3',
     coverMobile: surLeFilMobile,
     coverDesktop: surLeFilDesktop,
     youtubeLink: 'https://www.youtube.com/watch?v=_TBVtWfLBBQ',
