@@ -37,7 +37,12 @@ function HomePage() {
           animate={{ opacity: 1 }}
           transition={{ duration: 1 }}
         >
-          <img src={textImage} alt='' />
+          <img
+            src={textImage}
+            alt='Gilian artiste/chanteur'
+            width='320px'
+            height='320px'
+          />
         </m.div>
       )}
       <AnimatePresence mode='wait'>

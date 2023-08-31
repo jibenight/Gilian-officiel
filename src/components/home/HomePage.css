@@ -19,11 +19,6 @@
   top: 50%; /* Ajouté */
   left: 50%; /* Ajouté */
   transform: translate(-50%, -50%); /* Ajouté */
-  width: 100%;
-}
-
-#texte-logo img {
-  width: 90%;
 }
 
 @media screen and (max-width: 600px) {

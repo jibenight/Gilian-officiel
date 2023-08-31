@@ -25,13 +25,3 @@ nav ul li figcaption {
   text-align: center;
   display: none;
 }
-
-nav ul li picture:hover figcaption {
-  display: block;
-}
-
-@media (hover: none) {
-  figcaption {
-    display: none;
-  }
-}

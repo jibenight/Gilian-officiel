@@ -34,17 +34,26 @@ function Contact({ closeComponent, openMention }) {
         <div id='network'>
           {/* icon  */}
           <div className='network-icon'>
-            <a href=''>
+            <a
+              href='https://www.facebook.com/profile.php?id=100084549711615'
+              target='_blank'
+            >
               <img src={facebook} alt='logo de la page facebook de gilian' />
             </a>
           </div>
           <div className='network-icon'>
-            <a href=''>
+            <a
+              href='https://www.instagram.com/gilian_officiel/?hl=fr'
+              target='_blank'
+            >
               <img src={instagram} alt='logo de la page instagram de gilian' />
             </a>
           </div>
           <div className='network-icon'>
-            <a href=''>
+            <a
+              href='https://www.tiktok.com/@gilian_officiel?_t=8fGrl9mRnjk&_r=1'
+              target='_blank'
+            >
               <img src={tiktok} alt='logo de la page tiktok de gilian' />
             </a>
           </div>

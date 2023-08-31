@@ -25,7 +25,6 @@ function Menu({ setCurrentComponent }) {
                 width='60px'
                 height='60px'
               />
-              <figcaption>Tracks</figcaption>
             </picture>
           </li>
           <li onClick={() => setCurrentComponent('Gallery')}>
@@ -38,7 +37,6 @@ function Menu({ setCurrentComponent }) {
                 width='60px'
                 height='60px'
               />
-              <figcaption>Gallery</figcaption>
             </picture>
           </li>
           <li onClick={() => setCurrentComponent('Bio')}>
@@ -51,7 +49,6 @@ function Menu({ setCurrentComponent }) {
                 width='60px'
                 height='60px'
               />
-              <figcaption>Bio</figcaption>
             </picture>
           </li>
           <li onClick={() => setCurrentComponent('Contact')}>
@@ -64,7 +61,6 @@ function Menu({ setCurrentComponent }) {
                 width='60px'
                 height='60px'
               />
-              <figcaption>Contact</figcaption>
             </picture>
           </li>
         </ul>
