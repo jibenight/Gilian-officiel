@@ -69,29 +69,41 @@ Voici un exemple d'un objet piste du tableau :
 
 Si vous souhaitez ajouter une nouvelle piste à l'application, assurez-vous d'importer les ressources nécessaires et de les ajouter au tableau `tracksData` dans le format approprié.
 
-## Téléchargement de fichiers audio avec yt-dlp
+## Téléchargement de fichiers audio avec `yt-dlp`
 
-Si vous souhaitez télécharger des fichiers audio à partir de vidéos YouTube, voici comment procéder :
+Si vous souhaitez télécharger des fichiers audio à partir de vidéos YouTube, voici les étapes à suivre :
 
-### Installation de yt-dlp
+### Installation de `yt-dlp`
 
-Si vous avez `Homebrew` installé sur macOS :
+Sur macOS avec `Homebrew` :
 
 ```bash
 brew install yt-dlp
 ```
 
-### Comment extraire un fichier MP3 à partir d'une vidéo YouTube
+### Extraction de l'audio en format MP3 d'une vidéo YouTube
+
+1. Utilisez la commande suivante pour télécharger l'audio de la vidéo :
 
 ```bash
 yt-dlp --extract-audio --audio-format mp3 -o "chemin/vers/le/dossier/destinataire/nomdufichier.%(ext)s" "URL_DE_LA_VIDEO_YOUTUBE"
 ```
 
-Par exemple, pour sauvegarder un fichier MP3 intitulé `nouvelle-orleans.mp3` dans le dossier `src/assets/tracks` :
+Par exemple, pour sauvegarder un fichier MP3 nommé `nouvelle-orleans.mp3` dans le dossier `src/assets/tracks` :
 
 ```bash
 yt-dlp --extract-audio --audio-format mp3 -o "src/assets/tracks/nouvelle-orleans.%(ext)s" "https://www.youtube.com/watch?v=TH7ne94pjJQ"
 ```
+
+2. Après avoir téléchargé le fichier, transférez-le via FTP dans le dossier `public` du serveur, là où l'URL `gilian-officiel.com` pointe.
+
+3. Dans votre fichier `tracksData.js`, ajoutez ou modifiez le chemin du fichier comme ceci :
+
+```javascript
+source: 'https://gilian-officiel.com/tracks/nom-fichier.mp3';
+```
+
+Remplacez `nom-fichier.mp3` par le nom exact du fichier audio téléchargé.
 
 ---
 
