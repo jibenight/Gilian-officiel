@@ -1,6 +1,6 @@
-# react-gilian
+# Gilian-officiel
 
-Bienvenue sur le dépôt de `react-gilian`, une application React moderne conçue pour offrir une expérience utilisateur de qualité.
+Bienvenue sur le dépôt de `Gilian-officiel`, une application React moderne conçue pour offrir une expérience utilisateur de qualité.
 
 ## Prérequis
 
@@ -12,13 +12,13 @@ Bienvenue sur le dépôt de `react-gilian`, une application React moderne conçu
 1. Clonez ce dépôt :
 
 ```bash
-git clone https://github.com/jibenight/react-gilian.git
+git clone https://github.com/jibenight/Gilian-officiel.git
 ```
 
 2. Naviguez dans le répertoire du projet :
 
 ```bash
-cd react-gilian
+cd Gilian-officiel
 ```
 
 3. Installez les dépendances :
@@ -41,7 +41,7 @@ Cela démarrera simultanément le serveur et le client grâce à `concurrently`.
 
 ## Gestion des pistes audio dans l'application
 
-Dans `react-gilian`, le fichier `TracksData.js` situé dans le dossier `src/components/music-ep` joue un rôle crucial. Il est utilisé pour lister et afficher les pistes audio disponibles dans l'application.
+Dans `Gilian-officiel`, le fichier `TracksData.js` situé dans le dossier `src/components/music-ep` joue un rôle crucial. Il est utilisé pour lister et afficher les pistes audio disponibles dans l'application.
 
 ### Structure de `TracksData.js`
 
@@ -109,7 +109,7 @@ Remplacez `nom-fichier.mp3` par le nom exact du fichier audio téléchargé.
 
 ## Gestion des photos dans l'application
 
-Dans `react-gilian`, le fichier `photoData.js` situé dans le dossier `src/components/shooting` est utilisé pour lister et afficher les photos disponibles dans l'application.
+Dans `Gilian-officiel`, le fichier `photoData.js` situé dans le dossier `src/components/shooting` est utilisé pour lister et afficher les photos disponibles dans l'application.
 
 ### Structure de `photoData.js`
 
@@ -146,7 +146,7 @@ En suivant ces étapes, votre photo sera prête à être utilisée et affichée 
 
 ## Conversion des images en format `.webp`
 
-Dans `react-gilian`, les images doivent être préparées en deux formats pour une compatibilité optimale sur différents appareils. Nous utilisons le format `.webp` pour bénéficier de sa compression efficace et de sa qualité. Voici comment vous pouvez convertir vos images sous MacOS en utilisant `webp` via Homebrew.
+Dans `Gilian-officiel`, les images doivent être préparées en deux formats pour une compatibilité optimale sur différents appareils. Nous utilisons le format `.webp` pour bénéficier de sa compression efficace et de sa qualité. Voici comment vous pouvez convertir vos images sous MacOS en utilisant `webp` via Homebrew.
 
 ### Pré-requis :
 
