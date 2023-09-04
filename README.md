@@ -12,7 +12,7 @@ Bienvenue sur le dépôt de `react-gilian`, une application React moderne conçu
 1. Clonez ce dépôt :
 
 ```bash
-git clone https://github.com/votre_nom_dutilisateur/react-gilian.git
+git clone https://github.com/jibenight/react-gilian.git
 ```
 
 2. Naviguez dans le répertoire du projet :
@@ -60,14 +60,6 @@ Par exemple, pour sauvegarder un fichier MP3 intitulé `nouvelle-orleans.mp3` da
 ```bash
 yt-dlp --extract-audio --audio-format mp3 -o "src/assets/tracks/nouvelle-orleans.%(ext)s" "https://www.youtube.com/watch?v=TH7ne94pjJQ"
 ```
-
----
-
-N'oubliez pas de remplacer `votre_nom_dutilisateur` par votre véritable nom d'utilisateur GitHub dans l'URL du dépôt. J'espère que cela vous aide !
-
-Je vais ajouter cette information à la suite du `README` que nous avons rédigé précédemment :
-
----
 
 ## Gestion des pistes audio dans l'application
 
