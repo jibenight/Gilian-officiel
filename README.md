@@ -127,3 +127,50 @@ import nomPhotoDesktop from '../../assets/images/photos/desktop/nom-photo-deskto
 2. Ensuite, ajoutez un nouvel objet à la liste `photos` avec les attributs appropriés (comme montré ci-dessus).
 
 En suivant ces étapes, votre photo sera prête à être utilisée et affichée dans l'application où nécessaire.
+
+## Conversion des images en format `.webp`
+
+Dans `react-gilian`, les images doivent être préparées en deux formats pour une compatibilité optimale sur différents appareils. Nous utilisons le format `.webp` pour bénéficier de sa compression efficace et de sa qualité. Voici comment vous pouvez convertir vos images sous MacOS en utilisant `webp` via Homebrew.
+
+### Pré-requis :
+
+1. Installez Homebrew si ce n'est pas déjà fait :
+   ```bash
+   /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+   ```
+2. Installez le package `webp` :
+   ```bash
+   brew install webp
+   ```
+
+### Procédure de conversion :
+
+Placez toutes vos images originales dans le dossier `/assets/photos/originals`.
+
+Ensuite, utilisez la commande suivante pour convertir vos images :
+
+```bash
+# Pour le format desktop :
+for file in /assets/photos/originals/*; do
+    cwebp -q 80 -resize 1920 0 "$file" -o "/assets/photos/desktop/$(basename "$file" .jpg).webp"
+done
+
+# Pour le format mobile :
+for file in /assets/photos/originals/*; do
+    cwebp -q 80 -resize 480 0 "$file" -o "/assets/photos/mobile/$(basename "$file" .jpg).webp"
+done
+```
+
+_Note_: Ces commandes supposent que vos images originales sont en `.jpg`. Si elles sont dans un autre format, remplacez `.jpg` par le format approprié.
+
+### Nettoyage du dossier "originals" :
+
+Après avoir converti vos images, vous pouvez vider le dossier `/assets/photos/originals` avec la commande :
+
+```bash
+rm /assets/photos/originals/*
+```
+
+Maintenant, vos images sont prêtes à être utilisées dans l'application avec les résolutions appropriées pour desktop et mobile.
+
+---
