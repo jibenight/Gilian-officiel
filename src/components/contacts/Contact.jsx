@@ -43,17 +43,14 @@ function Contact({ closeComponent, openMention }) {
           </div>
           <div className='network-icon'>
             <a
-              href='https://www.instagram.com/gilian_officiel/?hl=fr'
+              href='https://www.instagram.com/gilian.officiel/'
               target='_blank'
             >
               <img src={instagram} alt='logo de la page instagram de gilian' />
             </a>
           </div>
           <div className='network-icon'>
-            <a
-              href='https://www.tiktok.com/@gilian_officiel?_t=8fGrl9mRnjk&_r=1'
-              target='_blank'
-            >
+            <a href='https://www.tiktok.com/@gilian_officiel' target='_blank'>
               <img src={tiktok} alt='logo de la page tiktok de gilian' />
             </a>
           </div>

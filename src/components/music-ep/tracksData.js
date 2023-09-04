@@ -37,8 +37,10 @@ const tracksData = [
   },
   {
     title: 'Nouvelle Orleans',
+    source: 'https://gilian-officiel.com/tracks/nouvelle-orleans.mp3',
     coverMobile: nouvelleOrleansMobile,
     coverDesktop: nouvelleOrleansDesktop,
+    youtubeLink: 'https://www.youtube.com/watch?v=TH7ne94pjJQ',
   },
 ];
 
