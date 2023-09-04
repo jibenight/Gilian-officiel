@@ -2,6 +2,7 @@
   font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
   text-decoration: none;
 }
+
 body {
   margin: 0;
   overflow-y: hidden;
@@ -43,7 +44,7 @@ button {
   grid-template-columns: 1fr;
   grid-template-rows: 1fr 9fr;
   gap: 0px 0px;
-  height: 80%;
+  height: calc(var(--vh) * 100);
   background-color: rgba(255, 255, 255, 0.9);
   border-radius: 15px;
   margin: 10px;
@@ -61,7 +62,6 @@ button {
 @media screen and (min-width: 960px) {
   .background-item {
     width: 50%;
-    height: 100%;
   }
 }
 
