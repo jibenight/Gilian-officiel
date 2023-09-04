@@ -91,6 +91,39 @@ Voici un exemple d'un objet piste du tableau :
 
 Si vous souhaitez ajouter une nouvelle piste à l'application, assurez-vous d'importer les ressources nécessaires et de les ajouter au tableau `tracksData` dans le format approprié.
 
----
+## Gestion des photos dans l'application
 
-Avec cette section ajoutée, votre `README` offre maintenant une compréhension claire de la manière dont les pistes audio sont gérées dans votre application.
+Dans `react-gilian`, le fichier `photoData.js` situé dans le dossier `src/components/shooting` est utilisé pour lister et afficher les photos disponibles dans l'application.
+
+### Structure de `photoData.js`
+
+Le fichier `photoData.js` importe les images nécessaires, puis les organise dans un tableau nommé `photos`.
+
+Chaque objet du tableau représente une photo avec les attributs suivants :
+
+- **figcaption** : La légende associée à la photo.
+- **mobile** : L'image destinée aux appareils mobiles.
+- **desktop** : L'image destinée aux appareils de bureau.
+
+Voici un exemple d'un objet photo du tableau :
+
+```javascript
+{
+    figcaption: 'Echo du phoenix',
+    mobile: echoDuPhoenix1Mobile,
+    desktop: echoDuPhoenix1Desktop,
+}
+```
+
+Pour ajouter une nouvelle photo à l'application :
+
+1. Importez d'abord les images depuis leurs emplacements respectifs. Assurez-vous d'avoir une version pour les appareils mobiles et une autre pour les appareils de bureau.
+
+```javascript
+import nomPhotoMobile from '../../assets/images/photos/mobile/nom-photo-mobile.webp';
+import nomPhotoDesktop from '../../assets/images/photos/desktop/nom-photo-desktop.webp';
+```
+
+2. Ensuite, ajoutez un nouvel objet à la liste `photos` avec les attributs appropriés (comme montré ci-dessus).
+
+En suivant ces étapes, votre photo sera prête à être utilisée et affichée dans l'application où nécessaire.
