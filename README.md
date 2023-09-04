@@ -37,29 +37,7 @@ npm start
 
 Cela démarrera simultanément le serveur et le client grâce à `concurrently`.
 
-## Téléchargement de fichiers audio avec yt-dlp
-
-Si vous souhaitez télécharger des fichiers audio à partir de vidéos YouTube, voici comment procéder :
-
-### Installation de yt-dlp
-
-Si vous avez `Homebrew` installé sur macOS :
-
-```bash
-brew install yt-dlp
-```
-
-### Comment extraire un fichier MP3 à partir d'une vidéo YouTube
-
-```bash
-yt-dlp --extract-audio --audio-format mp3 -o "chemin/vers/le/dossier/destinataire/nomdufichier.%(ext)s" "URL_DE_LA_VIDEO_YOUTUBE"
-```
-
-Par exemple, pour sauvegarder un fichier MP3 intitulé `nouvelle-orleans.mp3` dans le dossier `src/assets/tracks` :
-
-```bash
-yt-dlp --extract-audio --audio-format mp3 -o "src/assets/tracks/nouvelle-orleans.%(ext)s" "https://www.youtube.com/watch?v=TH7ne94pjJQ"
-```
+---
 
 ## Gestion des pistes audio dans l'application
 
@@ -90,6 +68,32 @@ Voici un exemple d'un objet piste du tableau :
 ```
 
 Si vous souhaitez ajouter une nouvelle piste à l'application, assurez-vous d'importer les ressources nécessaires et de les ajouter au tableau `tracksData` dans le format approprié.
+
+## Téléchargement de fichiers audio avec yt-dlp
+
+Si vous souhaitez télécharger des fichiers audio à partir de vidéos YouTube, voici comment procéder :
+
+### Installation de yt-dlp
+
+Si vous avez `Homebrew` installé sur macOS :
+
+```bash
+brew install yt-dlp
+```
+
+### Comment extraire un fichier MP3 à partir d'une vidéo YouTube
+
+```bash
+yt-dlp --extract-audio --audio-format mp3 -o "chemin/vers/le/dossier/destinataire/nomdufichier.%(ext)s" "URL_DE_LA_VIDEO_YOUTUBE"
+```
+
+Par exemple, pour sauvegarder un fichier MP3 intitulé `nouvelle-orleans.mp3` dans le dossier `src/assets/tracks` :
+
+```bash
+yt-dlp --extract-audio --audio-format mp3 -o "src/assets/tracks/nouvelle-orleans.%(ext)s" "https://www.youtube.com/watch?v=TH7ne94pjJQ"
+```
+
+---
 
 ## Gestion des photos dans l'application
 
@@ -172,5 +176,3 @@ rm /assets/photos/originals/*
 ```
 
 Maintenant, vos images sont prêtes à être utilisées dans l'application avec les résolutions appropriées pour desktop et mobile.
-
----
