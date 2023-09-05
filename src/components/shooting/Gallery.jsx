@@ -1,11 +1,27 @@
+import React, { useState, useEffect } from 'react';
 import './Gallery.css';
 import { motion as m } from 'framer-motion';
 import ButtonClose from '../close/ButtonClose';
-
-// library from assets
 import photos from './photoData';
+import swipeIcon from '../../assets/images/swipe-left.svg';
 
 function Gallery({ closeComponent }) {
+  const [showIcon, setShowIcon] = useState(true);
+
+  useEffect(() => {
+    const swiperEl = document.querySelector('.mySwiper');
+    console.log(swiperEl);
+    const onSlideChange = () => {
+      if (swiperEl.swiper.activeIndex === 2) {
+        setShowIcon(false);
+      }
+    };
+
+    swiperEl.addEventListener('slideChange', onSlideChange);
+
+    return () => swiperEl.removeEventListener('slideChange', onSlideChange);
+  }, []);
+
   return (
     <m.div
       className='background-item'
@@ -21,6 +37,23 @@ function Gallery({ closeComponent }) {
       </div>
 
       <div id='gallery'>
+        {showIcon && (
+          <m.img
+            src={swipeIcon}
+            alt='Swipe left icon'
+            initial={{ rotate: 90 }}
+            animate={{ rotate: -20 }}
+            transition={{ duration: 1, repeat: Infinity }}
+            style={{
+              position: 'absolute',
+              top: '50%',
+              left: '50%',
+              transform: 'translate(-50%, -50%)',
+              zIndex: 2,
+            }}
+          />
+        )}
+
         <swiper-container
           class='mySwiper'
           pagination='true'
