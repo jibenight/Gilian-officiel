@@ -93,9 +93,3 @@ button {
 body::-ms-scrollbar {
   width: 0px;
 }
-
-@media screen and (max-width: 767px) {
-  body {
-    transform: rotate(0deg);
-  }
-}

@@ -39,6 +39,33 @@ Cela démarrera simultanément le serveur et le client grâce à `concurrently`.
 
 ---
 
+## Mise en Production
+
+Pour déployer le site sur le serveur en utilisant Parcel v2, suivez ces étapes :
+
+1. **Génération du dossier de production** :
+
+   Avant de mettre en ligne, assurez-vous de générer le dossier de production avec Parcel. Exécutez la commande suivante :
+
+   ```bash
+   npm run build
+   ```
+
+   Ceci générera un dossier `dist` avec tous les fichiers nécessaires pour la production, optimisés pour une performance maximale.
+
+2. **Upload des fichiers** :
+
+   - Connectez-vous à votre serveur via FTP ou tout autre moyen d'accès à votre serveur.
+   - Naviguez jusqu'au dossier où `Gilian-officiel.com` pointe.
+   - Supprimez tous les fichiers précédents pour éviter les conflits de fichiers (optionnel mais recommandé pour un déploiement propre).
+   - Uploadez le contenu du dossier `dist` dans ce dossier.
+
+3. **Vérification** :
+
+   Après l'upload, ouvrez votre navigateur et allez sur `https://Gilian-officiel.com`. Vérifiez que tout est fonctionnel et s'affiche correctement.
+
+---
+
 ## Gestion des pistes audio dans l'application
 
 Dans `Gilian-officiel`, le fichier `TracksData.js` situé dans le dossier `src/components/music-ep` joue un rôle crucial. Il est utilisé pour lister et afficher les pistes audio disponibles dans l'application.
