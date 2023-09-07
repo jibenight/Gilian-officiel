@@ -12,7 +12,7 @@ Bienvenue sur le dépôt de `Gilian-officiel`, une application React moderne con
 1. Clonez ce dépôt :
 
 ```bash
-git clone https://github.com/jibenight/Gilian-officiel.git
+git clone git@github.com:jibenight/Gilian-officiel.git
 ```
 
 2. Naviguez dans le répertoire du projet :
