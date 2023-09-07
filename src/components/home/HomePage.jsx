@@ -8,7 +8,7 @@ import Gallery from '../shooting/Gallery';
 import Contact from '../contacts/Contact';
 import Menu from '../navigation/Menu';
 import Mention from '../Mention/Mention';
-import textImage from '../../assets/images/photos/homepage/text-mask.webp';
+import textImage from '../../assets/images/photos/homepage/text-mask.svg';
 
 function HomePage() {
   const [currentComponent, setCurrentComponent] = useState('');

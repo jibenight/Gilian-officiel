@@ -58,6 +58,7 @@ Pour déployer le site sur le serveur en utilisant Parcel v2, suivez ces étapes
    - Connectez-vous à votre serveur via FTP ou tout autre moyen d'accès à votre serveur.
    - Naviguez jusqu'au dossier où `Gilian-officiel.com` pointe.
    - Supprimez tous les fichiers précédents pour éviter les conflits de fichiers (optionnel mais recommandé pour un déploiement propre).
+     ⚠️ Attention: Si un dossier nommé tracks existe déjà sur le serveur (contenant les fichiers musicaux), ne le supprimez surtout pas lors de la mise à jour des fichiers. C'est essentiel pour le bon fonctionnement de l'application.
    - Uploadez le contenu du dossier `dist` dans ce dossier.
 
 3. **Vérification** :
