@@ -7,19 +7,21 @@ import swipeIcon from '../../assets/images/swipe-left.svg';
 
 function Gallery({ closeComponent }) {
   const [showIcon, setShowIcon] = useState(true);
+  const [startFadeOut, setStartFadeOut] = useState(false);
 
   useEffect(() => {
-    const swiperEl = document.querySelector('.mySwiper');
-    console.log(swiperEl);
-    const onSlideChange = () => {
-      if (swiperEl.swiper.activeIndex === 2) {
+    const timer = setTimeout(() => {
+      setStartFadeOut(true); // commencez l'effet de fade out
+      // Supprimez l'icône après l'animation (1 seconde ici)
+      setTimeout(() => {
         setShowIcon(false);
-      }
+      }, 1000);
+    }, 2000);
+
+    // Effacez les timers lorsque le composant est désassemblé pour éviter des erreurs
+    return () => {
+      clearTimeout(timer);
     };
-
-    swiperEl.addEventListener('slideChange', onSlideChange);
-
-    return () => swiperEl.removeEventListener('slideChange', onSlideChange);
   }, []);
 
   return (
@@ -41,9 +43,13 @@ function Gallery({ closeComponent }) {
           <m.img
             src={swipeIcon}
             alt='Swipe left icon'
-            initial={{ rotate: 90 }}
-            animate={{ rotate: -20 }}
-            transition={{ duration: 1, repeat: Infinity }}
+            initial={{ x: 0, opacity: 1 }}
+            animate={startFadeOut ? { x: -20, opacity: 0 } : { x: -20 }} // un petit décalage à gauche
+            transition={{
+              duration: 1,
+              repeat: Infinity,
+              repeatType: 'reverse',
+            }} // cela fait que l'animation retourne à son état d'origine après chaque cycle
             style={{
               position: 'absolute',
               top: '50%',

@@ -3,15 +3,8 @@
   text-decoration: none;
 }
 
-html {
-  height: 100vh;
-  height: 100svh;
-  height: 100dvh;
-}
-
 body {
   margin: 0;
-  overflow-y: hidden;
 }
 
 h1,
@@ -50,7 +43,7 @@ button {
   grid-template-columns: 1fr;
   grid-template-rows: 1fr 9fr;
   gap: 0px 0px;
-  height: 100svh;
+  height: 100vh;
   background-color: rgba(255, 255, 255, 0.9);
   border-radius: 15px;
   margin: 10px;
@@ -87,5 +80,22 @@ button {
   :root {
     color: #213547;
     background-color: #ffffff;
+  }
+}
+
+/* Pour Chrome, Safari et Opera */
+::-webkit-scrollbar {
+  width: 0px;
+  background: transparent; /* rendre transparent */
+}
+
+/* Pour Internet Explorer et Edge */
+body::-ms-scrollbar {
+  width: 0px;
+}
+
+@media screen and (max-width: 767px) {
+  body {
+    transform: rotate(0deg);
   }
 }
